@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #7099ae;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            background-color: #75838d;
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #81b55aa8;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        small {
+            color: #cccccc;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #5bc0de;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="post" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="city">City:</label>
+        <select id="city" name="city" required>
+            <option value="select">Select City</option>
+            <option value="newyork">New York</option>
+            <option value="london">London</option>
+            <option value="tokyo">Tokyo</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+        <small>Enter a 10-digit phone number.</small>
+
+        <label>Gender:</label>
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="gender" id="male" value="male" autocomplete="off" required>
+            <label class="btn btn-outline-primary" for="male">Male</label>
+
+            <input type="radio" class="btn-check" name="gender" id="female" value="female" autocomplete="off" required>
+            <label class="btn btn-outline-primary" for="female">Female</label>
+
+            <input type="radio" class="btn-check" name="gender" id="other" value="other" autocomplete="off" required>
+            <label class="btn btn-outline-primary" for="other">Other</label>
+        </div>
+
+        <label>Hobbies:</label>
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="reading" name="hobby" value="reading" autocomplete="off">
+            <label class="btn btn-primary" for="reading">Reading</label>
+
+            <input type="checkbox" class="btn-check" id="sports" name="hobby" value="sports" autocomplete="off">
+            <label class="btn btn-primary" for="sports">Sports</label>
+
+            <input type="checkbox" class="btn-check" id="traveling" name="hobby" value="traveling" autocomplete="off">
+            <label class="btn btn-primary" for="traveling">Traveling</label>
+            <!-- Add more checkboxes for other hobbies -->
+        </div>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
